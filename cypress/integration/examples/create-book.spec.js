@@ -20,8 +20,8 @@ describe("When the user wants to create a new book in the app", () =>{
     before(() =>{
         cy.visit(BASE_URL);
         cy.get('.ant-btn-primary > .ng-star-inserted').click();
-        cy.get("input[ng-reflect-name=name]").type(book_test_1.name);
-        cy.get("input[ng-reflect-name=author]").type(book_test_1.author);
+        cy.get("#name").type(book_test_1.name);
+        cy.get("#author").type(book_test_1.author);
         cy.get('.ant-modal-footer > .ant-btn-primary > .ng-star-inserted').click();
         cy.contains('10 / page').click();
         cy.contains('50 / page').click();
@@ -49,12 +49,12 @@ describe("When the user wants to cancel add a book", () =>{
     before(() =>{
         cy.visit(BASE_URL);
         cy.get('.ant-btn-primary > .ng-star-inserted').click();
-        cy.get("input[ng-reflect-name=name]").type(book_test_2.name);
-        cy.get("input[ng-reflect-name=author]").type(book_test_2.author);
+        cy.get("#name").type(book_test_2.name);
+        cy.get("#author").type(book_test_2.author);
         cy.get('.ant-modal-footer > [nztype="default"] > .ng-star-inserted').click();
         cy.contains('10 / page').click();
         cy.contains('50 / page').click();
-        
+
 
     });
 
@@ -72,7 +72,7 @@ describe("When the user wants to create a book without name field", () =>{
     before(() =>{
         cy.visit(BASE_URL);
         cy.get('.ant-btn-primary > .ng-star-inserted').click();
-        cy.get("input[ng-reflect-name=name]").type(book_test_1.name); 
+        cy.get("#name").type(book_test_1.name); 
     });
 
     it("Then the Save button should be disabled", () =>{
@@ -87,7 +87,7 @@ describe("When the user wants to create a book without author field", () =>{
     before(() =>{
         cy.visit(BASE_URL);
         cy.get('.ant-btn-primary > .ng-star-inserted').click();
-        cy.get("input[ng-reflect-name=author]").type(book_test_1.author);
+        cy.get("#author").type(book_test_1.author);
     });
 
     it("Then the Save button should be disabled", () =>{
