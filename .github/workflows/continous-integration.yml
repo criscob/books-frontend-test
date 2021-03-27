@@ -26,4 +26,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Tests
-        run: npm run test:e2e:ui
+        run: npm run test:e2e:ui:headless
