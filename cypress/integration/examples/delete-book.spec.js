@@ -33,6 +33,7 @@ describe("When the user wants to delete a book in the app", () =>{
     })
     it("Then the book should not be listed with the author which author it was created", ()=>{
         cy.get('table').contains('td',book_test_1.author).should('not.exist');
+        //final test
     })
 
 })

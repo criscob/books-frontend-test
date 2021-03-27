@@ -4,7 +4,6 @@ const {random } = require('faker');
 const book_test_1 ={
     author: "booktest1",
     name: "authortest1"
-   
 } 
 //Global variables
 const book_test_2 = {
