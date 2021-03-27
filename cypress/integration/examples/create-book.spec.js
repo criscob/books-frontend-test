@@ -61,9 +61,7 @@ describe("When the user wants to cancel add a book", () =>{
         cy.get('table').contains('td', book_test_2.name).should('not.exist');
     });
 
-    it("Then the book should not be listed with the author", () =>{
-        cy.get('table').contains('td', book_test_2.author).should('not.exist');
-    });
+  
 
 });
 
@@ -82,7 +80,7 @@ describe("When the user wants to create a book without name field", () =>{
 });
 
 describe("When the user wants to create a book without author field", () =>{
-    
+
     before(() =>{
         cy.visit(BASE_URL);
         cy.get('.ant-btn-primary > .ng-star-inserted').click();
