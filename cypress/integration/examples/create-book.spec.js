@@ -2,14 +2,14 @@
 //Imports
 const {random } = require('faker');
 const book_test_1 ={
-    author: random.words(1),
-    name: random.words(1),
+    author: "booktest1",
+    name: "authortest1"
    
 } 
 //Global variables
 const book_test_2 = {
-    author: random.words(1),
-    name:random.words(1),
+    author: "booktest2",
+    name:"authortest2"
 }  
 const {
     BASE_URL
