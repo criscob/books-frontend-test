@@ -4,12 +4,13 @@ const {random } = require('faker');
 
 //Global variables
 const book_test_1 ={
-    name: "authordetele",
-    author: "testbookdelete"
+    name: random.words(1),
+    author: random.words(1)
    
 } 
 const {
-    BASE_URL
+    BASE_URL,
+    TIME_OUT
  } = require('../../../utils/utils')
 
  //Tests
@@ -17,7 +18,9 @@ describe("When the user wants to delete a book in the app", () =>{
     before(()=>{
         cy.visit(BASE_URL);
         cy.get('.ant-btn-primary > .ng-star-inserted').click();
+        cy.wait(TIME_OUT);
         cy.get("#name").type(book_test_1.name);
+        cy.wait(TIME_OUT);
         cy.get("#author").type(book_test_1.author);
         cy.get('.ant-modal-footer > .ant-btn-primary > .ng-star-inserted').click();
         cy.contains('10 / page').click();
